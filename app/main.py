@@ -20,6 +20,9 @@ def get_human_age(cat_age: int, dog_age: int) -> list:
     """
     # TODO: Implement this function
     ages = [0, 0]
+    if (not isinstance(cat_age, int) or not isinstance(dog_age, int)):
+        raise TypeError()
+
     for index, age in enumerate([cat_age, dog_age]):
         if age < 15:
             ages[index] = 0
