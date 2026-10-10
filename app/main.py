@@ -21,7 +21,9 @@ def get_human_age(cat_age: int, dog_age: int) -> list:
     # TODO: Implement this function
     ages = [0, 0]
     for index, age in enumerate([cat_age, dog_age]):
-        if age < 24:
+        if age < 15:
+            ages[index] = 0
+        elif age < 24:
             ages[index] = age // 15
         elif age == 24:
             ages[index] = 2
